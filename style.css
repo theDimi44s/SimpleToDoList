@@ -39,27 +39,6 @@ body {
   overflow-y: auto;
 }
 
-.wrapper .footer {
-  display: flex;
-  widows: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.wrapper .footer button {
-  cursor: pointer;
-  color: #fff;
-  font-weight: 600;
-  padding: 10px 5px;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  background: rgb(191, 211, 16);
-}
-
-.wrapper .footer span {
-}
-
 .todoList li {
   list-style: none;
   height: 45px;
@@ -123,6 +102,31 @@ body {
 }
 
 .inputField button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .footer {
+  display: flex;
+  widows: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper .footer button {
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  background: rgb(191, 211, 16);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.wrapper .footer button.active {
   opacity: 1;
   pointer-events: auto;
 }
