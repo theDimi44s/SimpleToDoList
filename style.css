@@ -130,3 +130,80 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
+
+/* Checked input */
+
+.container {
+}
+
+.wrapper_inner {
+  background: #fff;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.form {
+  width: 20%;
+  position: relative;
+  height: 70px;
+  overflow: hidden;
+}
+
+.form .formInput {
+  height: 100%;
+  width: 100%;
+  color: #677eb6;
+  font-size: 20px;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #000;
+}
+
+.form label::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  border-bottom: 3px solid #677eb6;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #677eb6;
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translateX(0%);
+}
